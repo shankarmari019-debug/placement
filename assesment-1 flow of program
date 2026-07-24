@@ -1,0 +1,194 @@
+#question
+Input a year and find whether it is a leap year or not.
+Take two numbers and print the sum of both.
+Take a number as input and print the multiplication table for it.
+Take 2 numbers as inputs and find their HCF and LCM.
+Keep taking numbers as inputs till the user enters ‘x’, after that print sum of all.
+1.Input a year and find whether it is a leap year or not.
+flow chart:
+      Start
+         │
+         ▼
+   Read Year
+         │
+         ▼
+Is (Year % 400 == 0)
+      OR
+((Year % 4 == 0) AND
+ (Year % 100 != 0))?
+      │
+   ┌──┴──┐
+ Yes     No
+  │       │
+  ▼       ▼
+Print    Print
+"Leap"  "Not Leap"
+  │       │
+  └──┬────┘
+     ▼
+    Stop
+2.pseudocode:
+START
+Input year
+
+IF (year % 400 == 0) OR (year % 4 == 0 AND year % 100 != 0)
+    PRINT "Leap Year"
+ELSE
+    PRINT "Not a Leap Year"
+END IF
+
+STOP
+2.Take two numbers and print the sum of both.
+     Start
+       │
+       ▼
+ Read A and B
+       │
+       ▼
+ Sum = A + B
+       │
+       ▼
+ Print Sum
+       │
+       ▼
+      Stop
+pseudocode:
+START
+
+Input A
+Input B
+
+Sum = A + B
+
+PRINT Sum
+
+STOP
+
+3.Take a number as input and print the multiplication table for it.
+flowchart:
+        Start
+          │
+          ▼
+      Read Number
+          │
+          ▼
+       i = 1
+          │
+          ▼
+      Is i ≤ 10?
+      ┌───┴───┐
+     Yes      No
+      │        │
+      ▼        ▼
+Print Number×i Stop
+      │
+      ▼
+   i = i + 1
+      │
+      └──────────► Back to
+                  Is i ≤ 10?
+pseudocode:
+START
+
+Input number
+
+FOR i = 1 TO 10
+    PRINT number × i = number * i
+END FOR
+
+STOP
+4. Take 2 numbers as inputs and find their HCF and LCM
+flowchart:
+        Start
+          │
+          ▼
+    Read A and B
+          │
+          ▼
+      tempA = A
+      tempB = B
+          │
+          ▼
+     Is tempB ≠ 0?
+      ┌────┴────┐
+     Yes        No
+      │          │
+      ▼          ▼
+ remainder = tempA % tempB
+ tempA = tempB
+ tempB = remainder
+      │
+      └──────────► Repeat
+          │
+          ▼
+     HCF = tempA
+     LCM = (A × B) / HCF
+          │
+          ▼
+ Print HCF and LCM
+          │
+          ▼
+         Stop
+pseudocode:
+START
+
+Input A, B
+
+tempA = A
+tempB = B
+
+WHILE tempB != 0
+    remainder = tempA % tempB
+    tempA = tempB
+    tempB = remainder
+END WHILE
+
+HCF = tempA
+LCM = (A * B) / HCF
+
+PRINT HCF
+PRINT LCM
+
+STOP
+
+5.Keep taking numbers as inputs till the user enters 'x', after that print the sum of all
+flowchart:
+        Start
+          │
+          ▼
+      sum = 0
+          │
+          ▼
+ Read input (number/x)
+          │
+          ▼
+   Is input = 'x'?
+      ┌────┴────┐
+     Yes        No
+      │          │
+      ▼          ▼
+ Print sum   sum = sum + input
+      │          │
+      ▼          │
+     Stop ◄──────┘
+pseudocode:
+START
+
+sum = 0
+
+WHILE TRUE
+    Input value
+
+    IF value = 'x'
+        BREAK
+    END IF
+
+    sum = sum + value
+END WHILE
+
+PRINT sum
+
+STOP
+
+
+
